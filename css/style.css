@@ -348,7 +348,8 @@ ul.submenu li a:hover {
     margin-left: 5%;
     margin-right: 5%;
     max-width: 100%;
-
+    align-items: center;
+    align-content: center;
 }
 
 .img-produto {
