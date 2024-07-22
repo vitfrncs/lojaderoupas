@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Barra de navegação --------------------------------------------------------------------*/
+
+
+.barra-nav {
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logo {
+    flex: 15%;
+    text-align: left;
+    margin-left: 5%;
+    align-content: center;
+
+}
+
+.logo h1 {
+    font-family: "Oswald", sans-serif;
+}
+
+.logo h1 a {
+    color: #f8bb1e;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    font-size: 35px;
+    align-content: center;
+    transition: color 0.3s ease, color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #260e51;
+    text-shadow: 1px 1px #f8bb1e;
+}
+
+.barra-nav button {
+    background-color: transparent;
+    border: none;
+    color: #260e51;
+    display: none;
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #260e51;
+}
+
+.menu {
+    flex: 80%;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    justify-content: right;
+    align-items: center;
+    align-content: space-around;
+    padding-right: 5%;
+}
+
+
+
+.menu a {
+    padding: 15px 16px;
+    background-color: #f5e0b031;
+    border: 1px solid rgba(0, 0, 0, 0.008);
+    /*background-color: rgba(255, 235, 205, 0.184);*/
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #260e51ac;
+    color: white;
+}
+
+
+
+
+/*Configuração do banner ----------------------------------------------------------*/
+
+.banner {
+    margin-top: 70px;
+    display: flex;
+}
+
+.img-banner {
+    flex: 100%;
+    text-align: center;
+}
+
+/* Grid de produtos da página index ---------------------------------------------------------*/
+
+.produtos {
+    display: block;
+    margin-top: 80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+
+}
+
+.titulo-seção {
+    flex: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #260e51f4;
+}
+
+.cards-prod {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+    gap: 32px;
+}
+
+/* CARDS DE PRODUTOS ------------------------------------------------------------------*/
+
+.card {
+    background-color: #f5e0b018;
+    border: 1px solid rgba(0, 0, 0, 0.229);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    width: calc(25% - 20px);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /*cursor: pointer;*/
+    position: relative;
+
+}
+
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+    opacity: 0.5;
+}
+
+
+.card h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.preço {
+    color: grey;
+    font-size: 14px;
+}
+
+
+.card .ver-detalhes {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    border: none;
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.card .ver-detalhes:hover {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.card:hover .ver-detalhes {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/*ELEMENTOS DA PÁGINA DE TODOS OS PRODUTOS ---------------------------------------------*/
+
+.container-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    background-color: #fff;
+    color: #868686;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 9px 19px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-produtos {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #260e51f4;
+}
+
+.titulo-e-filtros {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    gap: 5px;
+}
+
+.container-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    background-color: #fff;
+    color: #868686;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 9px 19px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.container-dropdown:hover .dropdown {
+    color: #c2c2c2;
+    border: 1px solid #e5e5e5eb;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+.container-dropdown:hover .submenu {
+    display: block;
+    transition: display 0.3s ease;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 500;
+}
+
+ul.submenu li {
+    margin: 0;
+}
+
+ul.submenu li:hover {
+    border-left: 2px solid black;
+}
+
+ul.submenu li a {
+    color: black;
+    background: white;
+    padding: 10px 15px;
+    white-space: nowrap;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+ul.submenu li a:hover {
+    background-color: #f0f0f0;
+
+}
+
+/*ELEMENTOS DA PÁGINA DE PRODUTO ---------------------------------------------- */
+
+.card-de-compra {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-left: 15%;
+    margin-right: 5%;
+    max-width: 100%;
+
+}
+
+.img-produto {
+    flex: 1 1 60%;
+    /*flex: 50%;*/
+    align-items: center;
+    align-content: center;
+    /*background-color:red;*/
+}
+
+.img-produto img {
+    max-width: 90%;
+    height: auto;
+}
+
+.compra {
+    flex: 1 1 40%;
+    /*flex: 50%;*/
+    padding: 20px;
+    align-items: center;
+
+    background-color: #f5e0b018;
+    border: 1px solid rgba(0, 0, 0, 0.229);
+    border-radius: 5px;
+}
+
+.compra h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.compra h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.compra p {
+    font-size: 16px;
+    color: #666;
+}
+
+.opcoes-compra {
+    display: flex;
+    flex-direction: column;
+}
+
+.opções {
+    display: flex;
+    flex-direction: column;
+}
+
+.opções label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.opções select,
+.opções input[type="number"] {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+
+.opcoes-compra button {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #260e51;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.opcoes-compra button:hover {
+    background-color: #f8bb1e;
+    color: #260e51;
+}
+
+.produto-detalhes {
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5e0b018;
+    border: 1px solid rgba(0, 0, 0, 0.229);
+    border-radius: 5px;
+}
+
+.tabela-tamanhos {
+    flex: 1;
+}
+
+.descricao-produto {
+    flex: 1;
+    border-left: 1px solid rgba(0, 0, 0, 0.229);
+    padding: 0 20px 0 20px;
+    align-items: center;
+}
+
+.produto-detalhes h3 {
+    font-size: 25px;
+    color: #260e51;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: #3d3d3d;
+}
+
+table,
+th,
+td {
+    border: 1px solid #775757;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+}
+
+
+.descricao-produto p {
+    margin: 0;
+    color: #3d3d3d;
+    text-align: center;
+}
+
+
+/*ELEMENTOS LIGADOS À PÁGINA DE CONTATO ------------------------------------------------------*/
+
+
+
+.contato {
+    margin-top: 80px;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    flex-direction: row;
+    background-color: #f5e0b018;
+    border: 1px solid rgba(0, 0, 0, 0.229);
+    border-radius: 5px;
+
+}
+
+.card-form {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.img-form {
+    flex: 50%;
+    text-align: center;
+}
+
+.img-form img {
+    max-width: 70%;
+    height: auto;
+}
+
+
+.contato h2 {
+    display: block;
+    font-weight: bold;
+    /*text-transform: uppercase;*/
+    color: #260e51f4;
+    text-align: center;
+    white-space: wrap;
+}
+
+.contato p {
+    color: #3d3d3d;
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.redes-sociais {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+}
+
+.redes-sociais img {
+    width: 20px;
+    height: 20px;
+}
+
+.contato form {
+    width: 50%;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato form label {
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #3d3d3d;
+}
+
+.contato form input,
+.contato form textarea {
+    padding: 10px;
+    border: 1px solid #775757;
+    margin-bottom: 20px;
+}
+
+.contato form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contato form button {
+    padding: 15px 25px 15px 25px;
+    background-color: #260e51;
+    align-content: right;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    align-self: flex-end;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.contato form button:hover {
+    background-color: #f8bb1e;
+    color: #260e51;
+}
+
+/* ELEMENTOS DA PÁGINA SOBRE NÓS -------------------------------------------------------------------------*/
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+    background-color: #f5e0b00e;
+    border: 1px solid rgba(0, 0, 0, 0.009);
+    padding: 30px;
+}
+
+.sobre h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #260e51f4;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 30px;
+    align-self: flex-start;
+}
+
+.sobre h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 0;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    border-top: 1px solid rgba(0, 0, 0, 0.29);
+
+}
+
+.sobre p {
+    width: 90%;
+    text-align: justify;
+    padding-left: 9%;
+    padding-right: 3%;
+}
+
+
+.sobre-container {
+    flex: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*border-top: 1px solid rgba(0, 0, 0, 0.29);*/
+    padding-top: 10px;
+
+
+}
+
+
+.texto-sobre {
+    background-color: #ffffff;
+    border-left: 25px solid transparent;
+    border-image: url("../img/barra.png") 150 round;
+    justify-content: start;
+    padding-left: 15PX;
+    padding-right: 25px;
+
+}
+
+/* ELEMENTOS LIGADOS À PÁGINA DE ENTREGA/ENDEREÇO: -------------------------------------------*/
+
+.formulario-entrega {
+    display: block;
+    margin-top: 90px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    background-color: #f5e0b00e;
+    border: 1px solid rgba(0, 0, 0, 0.229);
+    border-radius: 3px;
+    padding: 25px;
+}
+
+.formulario-entrega h2 {
+    flex: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #260e51f4;
+    margin-bottom: 70px;
+}
+
+.formulario-entrega label {
+    display: block;
+    margin-top: 10px;
+    /*text-transform: uppercase;*/
+    font-weight: bold;
+}
+
+.formulario-entrega input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #a1a1a1;
+    border-radius: 4px;
+}
+
+.formulario-entrega button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 70px;
+    background-color: #260e51;
+    color: white;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.formulario-entrega button:hover {
+    background-color: #f8bb1e;
+    color: #260e51;
+}
+
+/*ELEMENTOS LIGADOS AO RODAPÉ DO SITE.*/
+
+
+footer {
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    /*border-top: 1px solid #f8bb1e;*/
+    color: #f8bb1e;
+    background-color: #f5e0b018;
+
+}
+
+.logo-rodape {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+
+}
+
+.logo-rodape a {
+    color: #f8bb1e;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    font-size: 30px;
+    transition: color 0.3s ease, color 0.3s ease;
+}
+
+.logo-rodape a:hover {
+    color: #260e51;
+    text-shadow: 1px 1px #f8bb1e;
+}
+
+footer p {
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    align-content: center;
+}
+
+.direitos {
+    margin-top: 20px;
+    color: #260e51;
+    font-size: 14px;
+    margin-bottom: 15px;
+}

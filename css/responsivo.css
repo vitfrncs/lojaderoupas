@@ -1,0 +1,114 @@
+@media screen and (max-width:880px) {
+
+    /*MENU RESPONSIVO */
+    .menu-toggle {
+        display: none;
+        padding-right: 5%;
+    }
+
+    /* muda o display para block, tornando o ícone do menu visível */
+    .menu-icon {
+        display: block;
+        padding-right: 20px;
+    }
+
+
+    /*muda o display para none e o flex-direction para column */
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.062);
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 15px 0;
+        width: 90%;
+        border-radius: 0;
+
+    }
+
+    /*torna o menu visivel quando o chekpoint menu.toggle, que está no mesmo espaço do menu.icon, é acionado */
+    .menu-toggle:checked+.menu-icon+.menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    /* PÁGINA DE PRODUTO  -------------------------------------------------------*/
+
+    .img-produto {
+        flex: 1 1 100%;
+        /*flex: 50%;*/
+        text-align: center;
+        /*background-color:red;*/
+    }
+
+    .compra {
+        flex: 1 1 100%;
+        margin: 20px;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .produto-detalhes {
+        display: block;
+
+    }
+
+    .descricao-produto {
+        flex: 1;
+        border-top: 1px solid rgba(0, 0, 0, 0.229);
+        border-left: 0;
+        padding: 0 20px 0 20px;
+    }
+
+    .descricao-produto p {
+        margin: 0;
+        color: #3d3d3d;
+        text-align: justify;
+    }
+
+    /*PÁGINA DE CONTATO ----------------------------------------------------------------*/
+    .contato {
+        flex-direction: column;
+    }
+
+    .card-form,
+    .img-form {
+        flex: 100%;
+    }
+
+    .img-form img {
+        max-width: 40%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    /*PÁGINA DE TODOS OS PRODUTOS -------------------------------------------------------*/
+
+    .titulo-e-filtros h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .titulo-e-filtros {
+        display: block;
+        margin-bottom: 25px;
+        align-items: left;
+
+    }
+
+    .filtros {
+        justify-content: right;
+    }
+}

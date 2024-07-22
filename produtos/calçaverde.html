@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vendemos roupas bacanas para quem se interessa em moda sustentável :). Visite nossa loja virtual.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <title>Calça VERDE | Dugongo</title>
+    <link rel="icon" href="../img/icone.png" type="image/x-icon">
+</head>
+
+<body>
+    <!--Menu da página -->
+    <nav class="barra-nav">
+        <!--Divisão do logo da loja-->
+        <div class="logo">
+            <h1>
+                <a href="../index.html">dugongo</a>
+            </h1>
+        </div>
+
+        <!--Input necessário para tornar o menu responsivo: -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <!--Menu de navegação-->
+        <div class="menu">
+            <a href="../index.html">HOME</a>
+            <a href="../produtos.html">PRODUTOS</a>
+            <a href="../sobre.html">SOBRE NÓS</a>
+            <a href="../contato.html">CONTATO</a>
+        </div>
+    </nav>
+
+    <section class="card-de-compra">
+        <div class="img-produto">
+            <img src="../img/calçaverde.jpg">
+        </div>
+        <div class="compra">
+            <h2>Calça VERDE</h2>
+            <h3>R$ 89,90</h3>
+            <p>ou 2x de R$ 44,95 sem juros</p>
+            <p>Calça 100% algodão </p>
+
+
+            <form action="../entrega.html" method="get" class="opcoes-compra">
+                <div class="opções">
+                    <label for="tamanhos">Tamanhos</label>
+                    <select required id="tamanhos" name="tamanhos">
+                        <option value="">Selecionar</option>
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+                </div>
+                <div class="opções">
+                    <label for="cores">Cores</label>
+                    <select required id="cores" name="cores">
+                        <option value="">Selecionar</option>
+                        <option value="cores">Verde</option>
+                    </select>
+                </div>
+                <div class="opções">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" name="quantidade" value="1" min="1">
+                </div>
+                <button type="submit">Compre agora</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="produto-detalhes">
+        <div class="tabela-tamanhos">
+            <h3>Tabela de Tamanhos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamanho</th>
+                        <th>Largura</th>
+                        <th>Altura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P</td>
+                        <td>52 cm</td>
+                        <td>72 cm</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>54 cm</td>
+                        <td>74 cm</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>56 cm</td>
+                        <td>76 cm</td>
+                    </tr>
+                    <tr>
+                        <td>GG</td>
+                        <td>58 cm</td>
+                        <td>78 cm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="descricao-produto">
+            <h3>Descrição</h3>
+            <p>Combinando estilo e conforto, as vestimentas Dugongo são 100% algodão e são perfeitas para uso diário ou
+                em ocasiões especiais. </p>
+            <p>Disponível em uma variedade de tamanhos, você pode escolher o que melhor se adequa ao seu corpo. Compre
+                agora e adicione um toque único ao seu guarda-roupa!</p>
+            <p>Entregamos em todo o Brasil.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo-rodape">
+            <h1>
+                <a href="../index.html">dugongo</a>
+            </h1>
+        </div>
+
+        <p>Loja que vende roupas bacanas para quem se interessa em moda sustentável :) </p>
+
+        <b class="direitos">© 2024 Dugongo. Todos os direitos reservados.</b>
+    </footer>
+</body>
+
+</html>
