@@ -348,6 +348,7 @@ ul.submenu li a:hover {
     margin-left: 5%;
     margin-right: 5%;
     max-width: 100%;
+    justify-content: center;
     align-items: center;
     align-content: center;
 }
@@ -361,7 +362,7 @@ ul.submenu li a:hover {
 }
 
 .img-produto img {
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -370,8 +371,7 @@ ul.submenu li a:hover {
     /*flex: 50%;*/
     padding: 20px;
     align-items: center;
-
-    background-color: #f5e0b018;
+    /*background-color: #f5e0b018;*/
     border: 1px solid rgba(0, 0, 0, 0.229);
     border-radius: 5px;
 }
